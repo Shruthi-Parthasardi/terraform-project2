@@ -8,7 +8,7 @@ resource "aws_instance" "one" {
 ami = "ami-0702b1aec03c6a3a4"
 instance_type = "t2.medium"
 key_name = "Singapore"
-vpc_security_group_ids = [aws_security_group.sg.id]
+vpc_security_group_ids = [aws_security_group.three.id]
 availability_zone = "ap-southeast-1a"
 user_data = <<EOF
               #!/bin/bash
@@ -27,7 +27,7 @@ resource "aws_instance" "two" {
 ami = "ami-0702b1aec03c6a3a4"
 instance_type = "t2.medium"
 key_name = "Singapore"
-vpc_security_group_ids = [aws_security_group.sg.id]
+vpc_security_group_ids = [aws_security_group.three.id]
 availability_zone = "ap-southeast-1b"
 user_data = <<EOF
            #!/bin/bash
